@@ -7,17 +7,20 @@ class ship(pygame.sprite.Sprite):
         super().__init__()
         self.image = SHIP
         #Image name
-        self.imgage = pygame.transform.scale(SHIP, (25,25))
-        self.ground=ground
-        self.x = 200
-        self.y = 280
+
+        self.x = 100
+        self.y = 100
         self.rect = pygame.Rect(self.x, self.y, 25, 25)
 
     def up(self):
         self.rect.y = self.rect.y - 25
+        if self.rect.y < 0:
+            self.kill()
 
     def down(self):
         self.rect.y = self.rect.y + 25
+        if self.rect.x < 0:
+            self.kill()
 
     def left(self):
         self.rect.x = self.rect.x - 25
