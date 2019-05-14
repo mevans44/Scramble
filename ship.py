@@ -1,15 +1,15 @@
 import pygame, sys, time, random
 from pygame.locals import *
 
-SHIP = pygame.image.load('resources/UFO.png')
+SHIP = pygame.image.load('resources/UFO2.png')
 class ship(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = SHIP
         #Image name
 
-        self.x = 100
-        self.y = 100
+        self.x = 75
+        self.y = 75
         self.rect = pygame.Rect(self.x, self.y, 25, 25)
 
     def up(self):
