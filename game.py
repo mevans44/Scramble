@@ -17,11 +17,16 @@ def update_fire():
 def update_fireball():
     DISPLAYSURF.blit(bal.imgae,bal.rect)
 
-DISPLAYSURF = pygame.display.set_mode((1000,500), 0, 32)
+DISPLAYSURF = pygame.display.set_mode((1024,576), 0, 32)
 pygame.display.set_caption("Scrambler Remake")
 
+BACKGROUND = pygame.image.load('resources/space.png')
+background_x = 0
+background_y = 0
+
 while True:
-    DISPLAYSURF.fill(WHITE)
+    DISPLAYSURF.blit(BACKGROUND,(background_x, background_y))
+
     DISPLAYSURF.blit(ufo.image,ufo.rect)
     DISPLAYSURF.blit(fye.image,fye.rect)
     DISPLAYSURF.blit(bal.image,bal.rect)
